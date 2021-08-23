@@ -7,7 +7,7 @@ Each workers holds their own configuration, that can be updated at runtime, and 
 
 ### Configuration
 
-The configuration, named *RatingRuleModels*, can be sumed up as follow:
+The configuration, named *RatingRuleInstances*, can be sumed up as follow:
 
 - **Name**
 > The name of the rated metric. It is the name by which you'll be able to query your metric afterward.
@@ -22,13 +22,13 @@ The configuration, named *RatingRuleModels*, can be sumed up as follow:
 > It can be enhanced with variables, defined in the RatingRules configuration, and made available through Prometheus.
 > More information on RatingRules can be read in the rating-operator ([Custom Resources](https://github.com/alterway/rating-operator/blob/master/documentation/CRD.md)) document.
 
-Below an example of a RatingRuleModel:
+Below an example of a RatingRuleInstance:
 
 ```yaml
 apiVersion: rating.alterway.fr/v1
-kind: RatingRuleModels
+kind: RatingRuleInstances
 metadata:
-  name: my-test-rule # The name of the RatingRuleModels object
+  name: my-test-rule # The name of the RatingRuleInstances object
 spec:
   metric: sum(kube_pod_container_resource_requests_cpu_cores) by (pod, namespace, node) # The prometheus query to execute
   name: pods_usage_cpu # The name of the metric
