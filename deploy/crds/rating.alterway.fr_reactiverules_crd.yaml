@@ -1,20 +1,20 @@
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
-  name: ratingrulemodels.rating.alterway.fr
+  name: ratingruleinstances.rating.alterway.fr
 spec:
   group: rating.alterway.fr
   names:
-    kind: RatingRuleModel
-    listKind: RatingRuleModelList
-    plural: ratingrulemodels
-    singular: ratingrulemodel
+    kind: RatingRuleInstance
+    listKind: RatingRuleInstanceList
+    plural: ratingruleinstances
+    singular: ratingruleinstance
   scope: Namespaced
   subresources:
     status: {}
   validation:
     openAPIV3Schema:
-      description: RatingRuleModel is the Schema for the RatingRuleModels API
+      description: RatingRuleInstance is the Schema for the RatingRuleInstances API
       properties:
         apiVersion:
           description: 'APIVersion defines the versioned schema of this representation
@@ -29,13 +29,19 @@ spec:
         metadata:
           type: object
         spec:
-          description: RatingRuleModelSpec defines the desired state of RatingRuleModel
+          description: RatingRuleInstanceSpec defines the desired state of RatingRuleInstance
           properties:
             metric:
               type: string
             name:
               type: string
             timeframe:
+              type: string
+            cpu:
+              type: string
+            memory:
+              type: string
+            price:
               type: string
           required:
           - metric
@@ -43,13 +49,19 @@ spec:
           - timeframe
           type: object
         status:
-          description: RatingRuleModelStatus defines the observed state of RatingRuleModel
+          description: RatingRuleInstanceStatus defines the observed state of RatingRuleInstance
           properties:
             metric:
               type: string
             name:
               type: string
             timeframe:
+              type: string
+            cpu:
+              type: string
+            memory:
+              type: string
+            price:
               type: string
           required:
           - metric
