@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rating-operator-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rating-operator-engine
+  template:
+    metadata:
+      labels:
+        name: rating-operator-engine
+    spec:
+      serviceAccountName: rating-operator-engine
+      containers:
+        - name: rating-operator-engine
+          # Replace this with the built image name
+          image: hub.rnd.alterway.fr/overboard/5gbiller/rating-operator-engine:master
+          command:
+          - /go/bin/rating-operator-engine
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "rating-operator-engine"
