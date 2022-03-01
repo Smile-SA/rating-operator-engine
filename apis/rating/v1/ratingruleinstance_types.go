@@ -9,9 +9,9 @@ type RatingRuleInstanceSpec struct {
 	Timeframe string `json:"timeframe"`
 	Metric    string `json:"metric"`
 	Name      string `json:"name"`
-	Cpu       string `json:"cpu"`
-	Memory    string `json:"memory"`
-	Price     string `json:"price"`
+	Cpu       string `json:"cpu,omitempty"`
+	Memory    string `json:"memory,omitempty"`
+	Price     string `json:"price,omitempty"`
 }
 
 // RatingRuleInstanceStatus defines the observed state of RatingRuleInstance
@@ -19,9 +19,9 @@ type RatingRuleInstanceStatus struct {
 	Timeframe string `json:"timeframe"`
 	Metric    string `json:"metric"`
 	Name      string `json:"name"`
-	Cpu       string `json:"cpu"`
-	Memory    string `json:"memory"`
-	Price     string `json:"price"`
+	Cpu       string `json:"cpu,omitempty"`
+	Memory    string `json:"memory,omitempty"`
+	Price     string `json:"price,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
