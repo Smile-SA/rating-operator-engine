@@ -46,6 +46,10 @@ spec:
                 type: string
               price:
                 type: string
+              power:
+                type: string
+              surface:
+                type: string
               timeframe:
                 type: string
             required:
@@ -65,6 +69,10 @@ spec:
               name:
                 type: string
               price:
+                type: string
+              power:
+                type: string
+              surface:
                 type: string
               timeframe:
                 type: string
