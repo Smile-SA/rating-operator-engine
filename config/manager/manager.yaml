@@ -16,7 +16,7 @@ spec:
       containers:
         - name: rating-operator-engine
           # Replace this with the built image name
-          image: hub.rnd.alterway.fr/overboard/5gbiller/rating-operator-engine:master
+          image: smilernd/rating-operator-engine:v3-proto-boumedienne
           command:
           - /go/bin/rating-operator-engine
           imagePullPolicy: Always

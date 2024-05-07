@@ -91,7 +91,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - alterway.smile.fr
+  - smile.rating.fr
   resources:
   - '*'
   verbs:
