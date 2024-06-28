@@ -12,8 +12,7 @@ type RatingRuleInstanceSpec struct {
 	Cpu       string `json:"cpu,omitempty"`
 	Memory    string `json:"memory,omitempty"`
 	Price     string `json:"price,omitempty"`
-	Power     string `json:"power,omitempty"`
-	Surface     string `json:"surface,omitempty"`
+
 }
 
 // RatingRuleInstanceStatus defines the observed state of RatingRuleInstance
@@ -24,8 +23,7 @@ type RatingRuleInstanceStatus struct {
 	Cpu       string `json:"cpu,omitempty"`
 	Memory    string `json:"memory,omitempty"`
 	Price     string `json:"price,omitempty"`
-	Power     string `json:"power,omitempty"`
-	Surface     string `json:"surface,omitempty"`
+
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
