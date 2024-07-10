@@ -25,7 +25,7 @@ The configuration, named *RatingRuleInstances*, can be sumed up as follow:
 Below an example of a RatingRuleInstance:
 
 ```yaml
-apiVersion: rating.alterway.fr/v1
+apiVersion: rating.smile.fr/v1
 kind: RatingRuleInstances
 metadata:
   name: my-test-rule # The name of the RatingRuleInstances object

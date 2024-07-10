@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: null
-  name: ratingruleinstances.rating.alterway.fr
+  name: ratingruleinstances.rating.smile.fr
 spec:
-  group: rating.alterway.fr
+  group: rating.smile.fr
   names:
     kind: RatingRuleInstance
     listKind: RatingRuleInstanceList
